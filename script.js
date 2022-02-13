@@ -80,9 +80,17 @@ var guaranteedCharacters = [];
    possibleCharacters = possibleCharacters.concat(specialChar);
    guaranteedCharacters.push(getRandom(specialChar));
  }
+//gets random characters for each option adjusting for user-selected length and joins results as string
+  for (let i = 0; i < options.length; i++) {
+    var possibleCharacter = getRandom(possibleCharacters);
+    result.push(possibleCharacter);
+  }
+  for (let i = 0; i < guaranteedCharacters.length; i++) {
+  result[i] = guaranteedCharacters[i];
+  } 
+  return result.join('');
 }
-// continue coding here... //
-
+// ends generatePassword function //
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
