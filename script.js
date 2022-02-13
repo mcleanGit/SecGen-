@@ -6,7 +6,7 @@ var numeric = ['0','1','2','3','4','5','6','7','8','9'];
 var specialChar = ['!','@','#','$','%','^','&','*','(',')','_','-','+','=','`','~','<','>','?'];
 // arrays checked with console.log()
 
-// getUserInfo function builds through prompts to gather password components
+// getUserInfo function builds through prompts to gather user-driven password criteria
 function getUserInfo() {
   alert(
     "Welcome to the SecGen Password Generator. Please click OK  to begin selecting your password criteria.");
@@ -46,14 +46,14 @@ var hasSpecialChar = confirm("Click OK if you wish to include special characters
   return confirmUserInfo;
 }
 
-//randomization function uses randomIndex and randomEl from arrays, lengths
+//randomization function uses array index and length to generate temporary element
 function getRandom(arr) {
   var randomIndex = Math.floor(Math.random() * arr.length);
   var randomEl = arr[randomIndex];
   return randomEl;
 }
 
-// generate Password
+// generatePassword function
 function generatePassword() {
   var options = getUserInfo();
 // var to store password as it is being concatenated
@@ -80,7 +80,7 @@ var guaranteedCharacters = [];
    possibleCharacters = possibleCharacters.concat(specialChar);
    guaranteedCharacters.push(getRandom(specialChar));
  }
-//gets random characters for each option adjusting for user-selected length and joins results as string
+//gets random characters for each option adjusting for user-selected length and joins results as string which becomes password
   for (let i = 0; i < options.length; i++) {
     var possibleCharacter = getRandom(possibleCharacters);
     result.push(possibleCharacter);
@@ -101,8 +101,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
-
 // Add event listener to generate button
+// button starts program: welcome alert, gets and confirms user info, ensures randomization, and password generation
 generateBtn.addEventListener("click", writePassword);
