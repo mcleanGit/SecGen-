@@ -39,5 +39,7 @@
 
 ## Screenshot of deployed application
 
+<img src="https://user-images.githubusercontent.com/94858165/153774966-9c5b387b-b68e-4ec1-85f5-ca912e52dd46.png" width="15%"></img> 
+<img src="https://user-images.githubusercontent.com/94858165/153774976-60b54a45-64df-415c-9853-c64092eee91a.png" width="15%"></img> 
 
 
