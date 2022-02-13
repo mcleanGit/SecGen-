@@ -1,4 +1,4 @@
-// Assignment code here
+// Revised submission 2022-02-13 following further extensive JS review and tutoring assistance 2022-01-29
 
 
 // Get references to the #generate element
