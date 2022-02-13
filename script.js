@@ -6,6 +6,22 @@ var numeric = ['0','1','2','3','4','5','6','7','8','9'];
 var specialChar = ['!','@','#','$','%','^','&','*','(',')','_','-','+','=','`','~','<','>','?'];
 // arrays checked with console.log()
 
+// getUserInfo function builds through prompts to gather password components
+function getUserInfo() {
+  alert(
+"Welcome to the SecGen Password Generator. Please click OK to begin selecting your Password criteria. Note: you must choose a valid Password length and OK at least one of the character-set choices.");
+// gets user info on password length, null returns to welcome alert if choices do not meet criteria; added null return for not-a-number input  
+var length = parseInt(prompt("Please choose a password length between 8 and 128 characters."));
+if (Number.isNaN(length)) {
+  alert("Please enter a number between 8 and 128.");
+  return null;
+}
+if (length < 8 || length > 128) {
+  alert("The number must be between 8 and 128 characters.");
+  return null;
+}
+} 
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
