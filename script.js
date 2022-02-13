@@ -33,6 +33,15 @@ var hasSpecialChar = confirm("Click OK if you wish to include special characters
     alert("You must choose at least one of the character sets.");
     return null;
   }
+  // creates object to confirm and store user input
+  var confirmUserInfo = {
+    length: length,
+    hasAlphaLc: hasAlphaLc,
+    hasAlphaUc: hasAlphaUc,
+    hasNumeric: hasNumeric,
+    hasSpecialChar: hasSpecialChar,
+  }
+  return confirmUserInfo;
 }
 // continue coding here... //
 
