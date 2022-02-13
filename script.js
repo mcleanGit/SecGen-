@@ -52,6 +52,12 @@ function getRandom(arr) {
   return randomEl;
 }
 
+// generate Password
+function generatePassword() {
+  var options = getUserInfo();
+// var to store password as it is being concatenated
+  var result = [];
+}  
 
 // continue coding here... //
 
