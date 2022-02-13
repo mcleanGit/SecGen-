@@ -8,6 +8,7 @@ var specialChar = ['!','@','#','$','%','^','&','*','(',')','_','-','+','=','`','
 
 // getUserInfo function builds through prompts to gather password components
 function getUserInfo() {
+
 // gets user info on password length, null returns to welcome alert if choices do not meet criteria; added null return for not-a-number input  
   var length = parseInt(prompt("Please choose a password length between 8 and 128 characters."));
   if (Number.isNaN(length)) {
@@ -43,6 +44,15 @@ var hasSpecialChar = confirm("Click OK if you wish to include special characters
   }
   return confirmUserInfo;
 }
+
+//randomization function uses randomIndex and randomEl from arrays, lengths
+function getRandom(arr) {
+  var randomIndex = Math.floor(Math.random() * arr.length);
+  var randomEl = arr[randomIndex];
+  return randomEl;
+}
+
+
 // continue coding here... //
 
 
