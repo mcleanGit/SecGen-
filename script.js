@@ -9,22 +9,31 @@ var specialChar = ['!','@','#','$','%','^','&','*','(',')','_','-','+','=','`','
 // getUserInfo function builds through prompts to gather password components
 function getUserInfo() {
 // gets user info on password length, null returns to welcome alert if choices do not meet criteria; added null return for not-a-number input  
-var length = parseInt(prompt("Please choose a password length between 8 and 128 characters."));
-if (Number.isNaN(length)) {
-  alert("Please enter a number between 8 and 128.");
+  var length = parseInt(prompt("Please choose a password length between 8 and 128 characters."));
+  if (Number.isNaN(length)) {
+    alert("Please enter a number between 8 and 128.");
   return null;
-}
-if (length < 8 || length > 128) {
+  }
+  if (length < 8 || length > 128) {
   alert("The number must be between 8 and 128 characters.");
   return null;
-}
-} 
+  }
+ 
 // requests user confirms for various character options
 var hasAlphaLc = confirm("Click OK if you wish to include lower-case characters, abc etc., in your password.");
 var hasAlphaUc = confirm("Click OK if you wish to include upper-case characters, ABC etc., in your password.");
 var hasNumeric = confirm("Click OK if you wish to include numerals 0-9 in your password.");
 var hasSpecialChar = confirm("Click OK if you wish to include special characters, !@#$ etc., in your password.");
 
+// special case of all four char sets false, returns null to welcome alert
+  if (hasAlphaLc === false && 
+    hasAlphaUc === false && 
+    hasNumeric === false &&
+    hasSpecialChar === false) {
+    alert("You must choose at least one of the character sets.");
+    return null;
+  }
+}
 // continue coding here... //
 
 
