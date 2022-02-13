@@ -8,7 +8,8 @@ var specialChar = ['!','@','#','$','%','^','&','*','(',')','_','-','+','=','`','
 
 // getUserInfo function builds through prompts to gather password components
 function getUserInfo() {
-
+  alert(
+    "Welcome to the SecGen Password Generator. Please click OK  to begin selecting your password criteria.");
 // gets user info on password length, null returns to welcome alert if choices do not meet criteria; added null return for not-a-number input  
   var length = parseInt(prompt("Please choose a password length between 8 and 128 characters."));
   if (Number.isNaN(length)) {
