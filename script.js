@@ -58,8 +58,29 @@ function generatePassword() {
   var options = getUserInfo();
 // var to store password as it is being concatenated
   var result = [];
-}  
-
+ 
+// ensures guaranteed number of characters, via push, from concatenating possible characters in user-chosen arrays
+var possibleCharacters = [];
+var guaranteedCharacters = [];
+// array turned into string
+ if (!options) return null;
+ if (options.hasAlphaLc) {
+   possibleCharacters = possibleCharacters.concat(alphaLc);
+   guaranteedCharacters.push(getRandom(alphaLc));
+ }
+ if (options.hasAlphaUc) {
+   possibleCharacters = possibleCharacters.concat(alphaUc);
+   guaranteedCharacters.push(getRandom(alphaUc));
+ }
+ if (options.hasNumeric) {
+   possibleCharacters = possibleCharacters.concat(numeric);
+   guaranteedCharacters.push(getRandom(numeric));
+ }
+ if (options.hasSpecialChar) {
+   possibleCharacters = possibleCharacters.concat(specialChar);
+   guaranteedCharacters.push(getRandom(specialChar));
+ }
+}
 // continue coding here... //
 
 
