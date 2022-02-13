@@ -8,8 +8,6 @@ var specialChar = ['!','@','#','$','%','^','&','*','(',')','_','-','+','=','`','
 
 // getUserInfo function builds through prompts to gather password components
 function getUserInfo() {
-  alert(
-"Welcome to the SecGen Password Generator. Please click OK to begin selecting your Password criteria. Note: you must choose a valid Password length and OK at least one of the character-set choices.");
 // gets user info on password length, null returns to welcome alert if choices do not meet criteria; added null return for not-a-number input  
 var length = parseInt(prompt("Please choose a password length between 8 and 128 characters."));
 if (Number.isNaN(length)) {
@@ -21,6 +19,14 @@ if (length < 8 || length > 128) {
   return null;
 }
 } 
+// requests user confirms for various character options
+var hasAlphaLc = confirm("Click OK if you wish to include lower-case characters, abc etc., in your password.");
+var hasAlphaUc = confirm("Click OK if you wish to include upper-case characters, ABC etc., in your password.");
+var hasNumeric = confirm("Click OK if you wish to include numerals 0-9 in your password.");
+var hasSpecialChar = confirm("Click OK if you wish to include special characters, !@#$ etc., in your password.");
+
+// continue coding here... //
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
