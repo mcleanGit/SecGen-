@@ -1,4 +1,4 @@
-# SecGen
+# SecGen-
 
 ## Random Password Generator
 
@@ -32,14 +32,16 @@
 
 - generated Password is written to browser page in textarea box where Your Secure Password placeholder was originally seen
 
+## Link to code repository
+
+https://github.com/mcleanGit/SecGen-
 
 ## Link to deployed application
 
---
+https://mcleangit.github.io/SecGen-/
 
 ## Screenshot of deployed application
 
 <img src="https://user-images.githubusercontent.com/94858165/153774966-9c5b387b-b68e-4ec1-85f5-ca912e52dd46.png" width="15%"></img> 
 <img src="https://user-images.githubusercontent.com/94858165/153774976-60b54a45-64df-415c-9853-c64092eee91a.png" width="15%"></img> 
-
 
